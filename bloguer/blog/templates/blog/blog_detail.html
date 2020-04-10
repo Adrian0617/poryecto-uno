@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+     <h2 class="section-heading mb-4 text-center">{{blog.titulo}}</h2>
+          <div class="text-center">
+  <img src="{{blog.image.url}}" class="img-fluid" alt="Responsive image" width="30%" height="auto"><br> <br> 
+     <p class="text-center">{{blog.contenido}}</p>
+     <p class="text-center">Creado por: Adrian Arias </p>
+{% endblock %}
