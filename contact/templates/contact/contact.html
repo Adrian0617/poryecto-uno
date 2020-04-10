@@ -1,0 +1,36 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+{%if 'ok' in request.GET%}
+    <p>en breve nos comunicaremos con usted </p>
+{% endif %}
+
+
+ <form action="" method="POST">
+ {% csrf_token %} 
+   <div class="form-group" >
+    <label for="formGroupExampleInput">Nombre</label>
+    <div class="input-group">
+    {{form.name}}
+    </div>
+    {{form.name.errors}}
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <div class="input-group">
+    {{form.email}}
+    </div>
+        {{form.email.errors}}
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Example textarea</label>
+    <div class="input-group">
+    {{form.mensaje}}
+    </div>
+        {{form.mensaje.errors}}
+  </div>
+  <button type="submit" class="btn btn-primary" value="enviar">enviar</button>
+</form> 
+{% endblock %} 
